@@ -1,8 +1,11 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Shalom and Life School</title><style>
+<title>Shalom and Life School</title>
+
+<style>
 *{
     margin:0;
     padding:0;
@@ -12,6 +15,7 @@
 
 body{
     background:#f5f5f5;
+    color:#333;
 }
 
 header{
@@ -20,42 +24,54 @@ header{
     text-align:center;
     padding:20px;
 }
-
+html{
+    scroll-behavior:smooth;
+}
 .logo{
-    width:120px;
-    height:120px;
+    width:100px;
+    height:100px;
     border-radius:50%;
-    object-fit:cover;
-    border:4px solid gold;
     margin-bottom:10px;
 }
 
 .hero{
-    background:#003366;
+    background:linear-gradient(rgba(0,0,0,.6),
+    rgba(0,0,0,.6)),
+    url('school.jpg');
+    background-size:cover;
+    background-position:center;
     color:white;
     text-align:center;
-    padding:80px 20px;
+    padding:120px 20px;
 }
 
 .hero h2{
-    font-size:35px;
+    font-size:40px;
     margin-bottom:15px;
 }
 
+.hero p{
+    font-size:18px;
+    margin-bottom:20px;
+}
+
 .btn{
-    display:inline-block;
     background:gold;
     color:black;
-    text-decoration:none;
     padding:12px 25px;
+    text-decoration:none;
     border-radius:5px;
-    margin-top:15px;
     font-weight:bold;
 }
 
 .section{
     padding:50px 20px;
     text-align:center;
+}
+
+.section h2{
+    margin-bottom:20px;
+    color:#003366;
 }
 
 .cards{
@@ -71,18 +87,21 @@ header{
     padding:20px;
     border-radius:10px;
     box-shadow:0 0 10px rgba(0,0,0,0.1);
+    opacity:0;
+transform:translateY(50px);
+transition:all 1s ease;
 }
+
 
 .gallery{
     display:flex;
     flex-wrap:wrap;
     justify-content:center;
-    gap:20px;
+    gap:15px;
 }
 
 .gallery img{
     width:300px;
-    max-width:90%;
     border-radius:10px;
 }
 
@@ -93,63 +112,173 @@ header{
     padding:50px 20px;
 }
 
+.contact p{
+    margin:10px 0;
+}
+
 footer{
     background:#111;
     color:white;
     text-align:center;
     padding:15px;
 }
-</style></head><body><header>
-    <img src="1781256596419.jpg" alt="School Logo" class="logo"><h1>SHALOM AND LIFE SCHOOL</h1>
 
-<p>Excellence Through Knowledge and Character</p>
+.whatsapp{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    background:#25D366;
+    color:white;
+    padding:15px 20px;
+    border-radius:50px;
+    text-decoration:none;
+    font-weight:bold;
+}
 
-</header><section class="hero">
-    <h2>ADMISSION IS ONGOING!</h2><p>
-    Give your child the opportunity to learn,
-    grow and succeed in a safe and inspiring environment.
-</p>
+@media(max-width:768px){
+    .hero h2{
+        font-size:30px;
+    }
 
-<a href="#contact" class="btn">Apply Now</a>
+    .gallery img{
+        width:90%;
+    }
+    form{
+    max-width:500px;
+    margin:auto;
+}
 
-</section><section class="section">
-    <h2>Why Choose Us?</h2><div class="cards">
+form input{
+    width:100%;
+    padding:12px;
+    border:1px solid #ccc;
+    border-radius:5px;
+}
 
-    <div class="card">
-        <h3>Qualified Teachers</h3>
-        <p>Dedicated professionals committed to quality education.</p>
+form button{
+    background:#003366;
+    color:white;
+    border:none;
+    padding:12px 25px;
+    border-radius:5px;
+    cursor:pointer;
+}j
+.whatsapp{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    background:#25D366;
+    color:white;
+    padding:15px;
+    border-radius:50px;
+    text-decoration:none;
+    font-weight:bold;
+}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <img src="logo.png" alt="School Logo" class="logo">
+    <h1>SHALOM AND LIFE SCHOOL</h1>
+    <p>Excellence Through Knowledge and Character</p>
+</header>
+<a href="https://wa.me/2348165573073" class="whatsapp">
+    💬 Chat With Us
+</a>
+
+<section class="hero">
+    <h2>Admission Is Ongoing!</h2>
+    <p>Enroll your child today and give them a bright future.</p>
+    <a href="#contact" class="btn">Apply Now</a>
+</section>
+
+<section class="section">
+    <h2>Why Choose Us?</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>Qualified Teachers</h3>
+            <p>Professional and experienced teachers dedicated to excellence.</p>
+        </div>
+
+        <div class="card">
+            <h3>Modern Learning</h3>
+            <p>Technology-driven education for the modern world.</p>
+        </div>
+
+        <div class="card">
+            <h3>Safe Environment</h3>
+            <p>A secure and friendly environment for learning.</p>
+        </div>
+
     </div>
+</section>
 
-    <div class="card">
-        <h3>Modern Learning</h3>
-        <p>Technology-enhanced teaching and learning methods.</p>
+<section class="section">
+    <h2>Principal's Welcome</h2>
+    <p>
+        Welcome to Shalom and Life School.
+        Our mission is to raise future leaders through quality education,
+        discipline, and godly character.
+    </p>
+</section>
+
+<section class="section">
+    <h2>School Gallery</h2>
+
+    <div class="gallery">
+        <img src="school1.jpg" alt="School Image">
+        <img src="school2.jpg" alt="School Image">
+        <img src="school3.jpg" alt="School Image">
     </div>
+</section>
 
-    <div class="card">
-        <h3>Safe Environment</h3>
-        <p>A secure and friendly atmosphere for every child.</p>
-    </div>
+<section class="contact" id="contact">
+    <h2>Contact Us</h2>
 
-</div>
+    <p>📞 Phone: +234 8165573073</p>
+    <p>📧 Email: shalomandlifeschool@gmail.com</p>
+    <p>📍 Address: opuraja road before the bakery Adeje warri Delta state</p>
+</section>
+<script>
+const cards = document.querySelectorAll('.card');
 
-</section><section class="section">
-    <h2>School Gallery</h2><div class="gallery">
+window.addEventListener('scroll', () => {
+    cards.forEach(card => {
+        const top = card.getBoundingClientRect().top;
 
-    <img src="IMG-20250430-WA0003.jpg" alt="School Building">
+        if(top < window.innerHeight - 100){
+            card.style.opacity = "1";
+            card.style.transform = "translateY(0)";
+        }
+    });
+});
+</script>
+<section class="section">
+    <h2>Online Admission Form</h2>
 
-    <img src="1781256320589.jpg" alt="School Activities">
+    <form>
+        <input type="text" placeholder="Student Name" required><br><br>
 
-</div>
+        <input type="text" placeholder="Class Applying For" required><br><br>
 
-</section><section class="contact" id="contact"><h2>Contact Us</h2>
+        <input type="text" placeholder="Parent/Guardian Name" required><br><br>
 
-<p>📞 Phone: +234 8165573073</p>
+        <input type="tel" placeholder="Phone Number" required><br><br>
 
-<p>📧 Email: shalomandlifeschool@gmail.com</p>
+        <input type="email" placeholder="Email Address"><br><br>
 
+        <button type="submit">Submit Application</button>
+    </form>
+</section>
 
-
-</section><footer>
+<footer>
     <p>&copy; 2026 Shalom and Life School. All Rights Reserved.</p>
-</footer></body>
-              </html>
+</footer>
+
+<a class="whatsapp"
+href="https
